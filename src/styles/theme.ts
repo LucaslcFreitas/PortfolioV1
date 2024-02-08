@@ -1,8 +1,17 @@
 export const theme = {
     colors: {
-        primaryColor: '#0A1128',
-        secondaryColor: '#dc143c',
-        white: '#FFFFFF',
-        mediumGray: '#DDDDDD',
+        backgroundPrimary: '#1F1F1F',
+        backgroundSecondary: '#141414',
+        backgroundTertiary: '#5F5F5F',
+        gradientMainPrimary: '#3D54DD',
+        gradientMainSecondary: '#BD00ED',
+        gradientAlternatePrimary: '#FF6B00',
+        gradientAlternateSecondary: 'rgba(193, 83, 3, 0.75)',
+        title: '#ffffff',
+        titleAlternate: '#FF6B00',
+        paragraph: '#C0C0C0',
+
+        blue: '#3D54DD',
+        lightBlue: '#6379FA',
     },
 };
