@@ -14,5 +14,6 @@ export const theme = {
 
         blue: '#3D54DD',
         lightBlue: '#6379FA',
+        write: '#ffffff',
     },
 };

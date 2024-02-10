@@ -1,5 +1,6 @@
 'use client';
 
+import About from '@/components/About';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
@@ -9,7 +10,7 @@ const Heading = styled.h1`
 export default function Homepage() {
     return (
         <>
-            <Heading>Portfolio Heading</Heading>
+            <About />
         </>
     );
 }

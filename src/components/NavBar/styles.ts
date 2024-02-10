@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const NavContainer = styled.nav`
     position: fixed;
+    top: 0;
+    left: 0;
     width: 7rem;
     height: 100vh;
     background: ${({ theme }) => theme.colors.backgroundSecondary};
