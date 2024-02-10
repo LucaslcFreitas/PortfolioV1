@@ -2,6 +2,7 @@ export const theme = {
     colors: {
         backgroundPrimary: '#1F1F1F',
         backgroundSecondary: '#141414',
+        backgroundSecondaryHover: '#181818',
         backgroundTertiary: '#5F5F5F',
         gradientMainPrimary: '#3D54DD',
         gradientMainSecondary: '#BD00ED',
