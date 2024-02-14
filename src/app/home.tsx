@@ -1,6 +1,8 @@
 'use client';
 
 import About from '@/components/About';
+import Presentation from '@/components/Presentation';
+import Section from '@/components/Section';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
@@ -10,7 +12,10 @@ const Heading = styled.h1`
 export default function Homepage() {
     return (
         <>
-            <About />
+            <Presentation />
+            <Section id="about" title="Sobre Mim">
+                <About />
+            </Section>
         </>
     );
 }
