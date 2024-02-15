@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
     position: relative;
     width: 130rem;
-    margin: 0 auto;
+    margin: 5rem auto;
 `;
 
 export const TitleBox = styled.div`

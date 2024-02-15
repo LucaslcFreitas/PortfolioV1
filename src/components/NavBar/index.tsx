@@ -5,9 +5,9 @@ function NavBar() {
     return (
         <Styled.NavContainer>
             <NavBarLink text="Sobre" to="#about" selected />
-            <NavBarLink text="Habilidades" to="#about" />
-            <NavBarLink text="Projetos" to="#about" />
-            <NavBarLink text="Contatos" to="#about" />
+            <NavBarLink text="Habilidades" to="#skills" />
+            <NavBarLink text="Projetos" to="#projects" />
+            <NavBarLink text="Contatos" to="#contacts" />
         </Styled.NavContainer>
     );
 }
