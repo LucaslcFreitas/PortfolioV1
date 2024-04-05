@@ -18,12 +18,12 @@ export const theme = {
         grey: '#121212',
     },
     media: {
-        smallMobile: '(max-width: 600px)',
-        mobile: '(min-width: 600px) and (max-width: 768px)',
-        tablet: '(min-width: 768px) and (max-width: 992px)',
-        smallDesktop: '(min-width: 992px) and (max-width: 1200px)',
-        normalDesktop: '(min-width: 1200px) and (max-width: 1600px)',
         largeDesktop: '(min-width: 1600px)',
+        normalDesktop: '(min-width: 1200px) and (max-width: 1600px)',
+        smallDesktop: '(min-width: 992px) and (max-width: 1200px)',
+        tablet: '(min-width: 768px) and (max-width: 992px)',
+        mobile: '(min-width: 600px) and (max-width: 768px)',
+        smallMobile: '(max-width: 600px)',
     },
     container: {
         large: '130rem',
