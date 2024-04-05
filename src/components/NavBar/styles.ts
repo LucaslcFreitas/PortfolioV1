@@ -47,4 +47,16 @@ export const NavContainer = styled.nav`
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        display: none;
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+        display: none;
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        display: none;
+    }
 `;
