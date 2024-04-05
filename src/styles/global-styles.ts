@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.title};
     font-family: 'Lexend Exa', sans-serif;
   }
-  p {
+  p, a {
     color: ${({ theme }) => theme.colors.paragraph};
     font-family: 'Lexend Exa', sans-serif;
   }
