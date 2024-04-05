@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    padding: 0.5rem;
+    width: 100%;
+    background-image: url('./assets/presentation-bg-xlarge.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+`;
+
+export const Content = styled.div`
     position: relative;
     width: 100rem;
     margin: 9rem auto;
@@ -52,7 +61,6 @@ export const Presentation = styled.h2`
 export const Name = styled.h1`
     font-size: 5.8rem;
     color: ${({ theme }) => theme.colors.titleAlternate};
-    text-shadow: 0 0 3px ${({ theme }) => theme.colors.write};
 `;
 
 export const Description = styled.h3`

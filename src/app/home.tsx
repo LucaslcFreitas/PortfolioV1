@@ -7,13 +7,13 @@ import Skills from '@/components/Skills';
 import styled from 'styled-components';
 import Projects from '@/components/Projects';
 import Contacts from '@/components/Contacts';
+import Footer from '@/components/Footer';
 
 //Datas
-import { descriptionsData } from '@/components/About/data';
-import { skillsData } from '@/components/Skills/data';
-import { projectsData } from '@/components/Projects/data';
-import { contactsData } from '@/components/Contacts/data';
-import Footer from '@/components/Footer';
+import { descriptionsData } from '@/data/descriptions';
+import { skillsData } from '@/data/skills';
+import { projectsData } from '@/data/projects';
+import { contactsData } from '@/data/contacts';
 
 const Heading = styled.h1`
     background: ${({ theme }) => theme.colors.backgroundPrimary};

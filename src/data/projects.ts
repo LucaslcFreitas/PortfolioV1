@@ -1,4 +1,4 @@
-import { ProjectType } from '../ProjectCard';
+import { ProjectType } from '../components/ProjectCard';
 
 export const projectsData: ProjectType[] = [
     {

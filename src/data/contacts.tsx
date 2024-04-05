@@ -1,4 +1,4 @@
-import { ContactType } from '../ContactCard';
+import { ContactType } from '../components/ContactCard';
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
@@ -13,8 +13,8 @@ export const contactsData: ContactType[] = [
     {
         icon: <FaLinkedinIn />,
         title: 'LinkedIn',
-        value: '@lucas-freitas-82b560205',
-        link: 'https://www.linkedin.com/in/lucas-freitas-82b560205/',
+        value: '@lucaslc-freitas',
+        link: 'https://www.linkedin.com/in/lucaslc-freitas/',
         type: 'link',
     },
     {

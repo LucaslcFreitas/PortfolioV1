@@ -1,4 +1,4 @@
-import { SkillList } from '.';
+import { SkillList } from '../components/Skills';
 
 export const skillsData: SkillList[] = [
     {
