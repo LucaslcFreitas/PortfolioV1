@@ -9,6 +9,7 @@ import Projects from '@/components/Projects';
 import Contacts from '@/components/Contacts';
 
 //Datas
+import { descriptionsData } from '@/components/About/data';
 import { skillsData } from '@/components/Skills/data';
 import { projectsData } from '@/components/Projects/data';
 import { contactsData } from '@/components/Contacts/data';
@@ -22,7 +23,7 @@ export default function Homepage() {
         <>
             <Presentation />
             <Section id="about" title="Sobre Mim">
-                <About />
+                <About descriptions={descriptionsData} />
             </Section>
             <Section id="skills" title="Habilidades">
                 <Skills skillsList={skillsData} />
