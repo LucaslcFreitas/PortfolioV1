@@ -96,7 +96,7 @@ export const ContainerProject = styled.div<ContainerProjectProps>`
         background-image: url(${({ thumbnail }) => thumbnail});
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
     }
 
     &::after {

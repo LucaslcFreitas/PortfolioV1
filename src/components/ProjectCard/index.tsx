@@ -1,36 +1,38 @@
 import * as Styled from './styles';
 
 export type ProjectCardProps = {
+    onOpen: (project: ProjectType) => void;
+    project: ProjectType;
+};
+
+export type ProjectType = {
+    id: string;
     name: string;
     thumbnail: string;
     createAt: string;
     descriptions: string[];
     repositoryUrl?: string;
     viewUrl?: string;
-    images: ProgectImage[];
+    images: ProjectImage[];
 };
 
-export type ProgectImage = {
+export type ProjectImage = {
     id: string;
     imgSource: string;
+    alt: string;
 };
 
-function ProjectCard({
-    name,
-    thumbnail,
-    createAt,
-    descriptions,
-    repositoryUrl = undefined,
-    viewUrl = undefined,
-    images,
-}: ProjectCardProps) {
+function ProjectCard({ onOpen, project }: ProjectCardProps) {
     return (
-        <Styled.ContainerProject thumbnail={thumbnail}>
+        <Styled.ContainerProject
+            thumbnail={project.thumbnail}
+            onClick={() => onOpen(project)}
+        >
             <Styled.ProjectFooter>
-                <Styled.FooterSubitle>{name}</Styled.FooterSubitle>
+                <Styled.FooterSubitle>{project.name}</Styled.FooterSubitle>
                 <Styled.FooterButton>Ver mais</Styled.FooterButton>
             </Styled.ProjectFooter>
-            <Styled.ProjectTitle>{name}</Styled.ProjectTitle>
+            <Styled.ProjectTitle>{project.name}</Styled.ProjectTitle>
         </Styled.ContainerProject>
     );
 }
