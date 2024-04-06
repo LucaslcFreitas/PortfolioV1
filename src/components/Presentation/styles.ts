@@ -8,11 +8,8 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        background-image: url('./assets/presentation-bg-small.svg');
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         background-image: url('./assets/presentation-bg-small.svg');
     }
 
@@ -78,12 +75,8 @@ export const ProfileBox = styled.div`
         pointer-events: none;
     }
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        width: 22rem;
-        height: 22rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         width: 22rem;
         height: 22rem;
     }
@@ -110,12 +103,8 @@ export const ImgProfile = styled.img`
     height: 36rem;
     border-radius: 50%;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        width: 20.5rem;
-        height: 20.5rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         width: 20.5rem;
         height: 20.5rem;
     }
@@ -140,12 +129,8 @@ export const Presentation = styled.h2`
     font-size: 4.4rem;
     margin-bottom: 1rem;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        font-size: 2.6rem;
-        margin-bottom: 0.5rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         font-size: 2.6rem;
         margin-bottom: 0.5rem;
     }
@@ -167,11 +152,8 @@ export const Name = styled.h1`
     font-size: 5.8rem;
     color: ${({ theme }) => theme.colors.titleAlternate};
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        font-size: 4rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         font-size: 4rem;
     }
 
@@ -194,15 +176,9 @@ export const Description = styled.h3`
     margin-left: 0.3rem;
     margin-bottom: 3rem;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        font-size: 1.4rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
-        font-size: 1.4rem;
-    }
-
-    @media ${({ theme }) => theme.media.tablet} {
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         font-size: 1.4rem;
     }
 
@@ -232,11 +208,8 @@ export const ButtonContact = styled.button`
         background: rgba(61, 84, 221, 1);
     }
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        padding: 1rem 2rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         padding: 1rem 2rem;
     }
 `;

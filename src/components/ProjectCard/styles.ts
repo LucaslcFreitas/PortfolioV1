@@ -14,15 +14,9 @@ export const ProjectTitle = styled.p`
     visibility: visible;
     transition: all 300ms;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        font-size: 2rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
-        font-size: 2rem;
-    }
-
-    @media ${({ theme }) => theme.media.tablet} {
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         font-size: 2rem;
     }
 
@@ -100,11 +94,8 @@ export const ProjectFooter = styled.div`
     z-index: -10;
     transition-duration: 300ms;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        display: none;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         display: none;
     }
 
@@ -171,26 +162,16 @@ export const ContainerProject = styled.div<ContainerProjectProps>`
         }
     }
 
-    @media ${({ theme }) => theme.media.smallMobile} {
+    @media ${({ theme }) => theme.media.mobile} {
         height: calc((100vw / 16) * 9);
-
-        &:hover {
-            transform: scale(1);
-
-            ${ProjectTitle}, &::after {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            ${ProjectFooter} {
-                bottom: 0;
-            }
-        }
     }
 
     @media ${({ theme }) => theme.media.mobile} {
         height: 32rem;
+    }
 
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         &:hover {
             transform: scale(1);
 

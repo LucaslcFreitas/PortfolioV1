@@ -108,19 +108,13 @@ export const Title = styled.h4`
 export const Description = styled.p`
     font-size: 1.6rem;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         font-size: 1.2rem;
     }
 
-    @media ${({ theme }) => theme.media.mobile} {
-        font-size: 1.2rem;
-    }
-
-    @media ${({ theme }) => theme.media.tablet} {
-        font-size: 1.4rem;
-    }
-
-    @media ${({ theme }) => theme.media.smallDesktop} {
+    @media ${({ theme }) => theme.media.smallDesktop},
+        ${({ theme }) => theme.media.tablet} {
         font-size: 1.4rem;
     }
 `;

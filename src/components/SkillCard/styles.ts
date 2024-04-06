@@ -8,19 +8,14 @@ export const SkillImg = styled.img`
     filter: grayscale(100%);
     transition: all 300ms;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        width: 3.5rem;
-        height: 3.5rem;
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         filter: grayscale(0%);
     }
 
-    @media ${({ theme }) => theme.media.mobile} {
-        width: 3.5rem;
-        height: 3.5rem;
-        filter: grayscale(0%);
-    }
-
-    @media ${({ theme }) => theme.media.tablet} {
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         width: 3.5rem;
         height: 3.5rem;
     }
@@ -37,23 +32,14 @@ export const SkillTitle = styled.p`
     background-color: ${({ theme }) => theme.colors.backgroundTertiary};
     transition: all 300ms;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        min-width: 6rem;
-        top: 3.5rem;
-        font-size: 1.1rem;
-        padding: 0.2rem;
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         color: ${({ theme }) => theme.colors.title};
     }
 
-    @media ${({ theme }) => theme.media.mobile} {
-        min-width: 6rem;
-        top: 3.5rem;
-        font-size: 1.1rem;
-        padding: 0.2rem;
-        color: ${({ theme }) => theme.colors.title};
-    }
-
-    @media ${({ theme }) => theme.media.tablet} {
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         min-width: 6rem;
         top: 3.5rem;
         font-size: 1.1rem;
@@ -130,42 +116,8 @@ export const ContainerCard = styled.div`
         color: ${({ theme }) => theme.colors.title};
     }
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        width: 8rem;
-        height: 4rem;
-        border-right-color: ${({ theme }) =>
-            theme.colors.gradientAlternatePrimary};
-        border-left-color: ${({ theme }) =>
-            theme.colors.gradientAlternatePrimary};
-
-        &:hover {
-            transform: scale(1);
-        }
-
-        &::before,
-        &::after {
-            width: 5.3rem;
-            height: 5.3rem;
-        }
-
-        &::before {
-            top: -2.9rem;
-            border-right-color: ${({ theme }) =>
-                theme.colors.gradientAlternatePrimary};
-            border-top-color: ${({ theme }) =>
-                theme.colors.gradientAlternatePrimary};
-        }
-
-        &::after {
-            top: 1.3rem;
-            border-left-color: ${({ theme }) =>
-                theme.colors.gradientAlternatePrimary};
-            border-bottom-color: ${({ theme }) =>
-                theme.colors.gradientAlternatePrimary};
-        }
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         width: 8rem;
         height: 4rem;
         border-right-color: ${({ theme }) =>

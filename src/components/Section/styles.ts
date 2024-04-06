@@ -51,11 +51,8 @@ export const Title = styled.h2`
     display: inline;
     font-size: 3.6rem;
 
-    @media ${({ theme }) => theme.media.smallMobile} {
-        font-size: 2.2rem;
-    }
-
-    @media ${({ theme }) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
         font-size: 2.2rem;
     }
 
