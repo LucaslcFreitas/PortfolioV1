@@ -50,12 +50,40 @@ export const ContentModal = styled.div`
     position: relative;
     display: flex;
     width: 110rem;
-    min-height: 50rem;
+    height: 50rem;
     background-color: ${({ theme }) => theme.colors.backgroundPrimary};
     overflow: hidden;
     border-radius: 1rem;
     transform: translateY(-10px);
     animation: ${showContent} 300ms linear;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        flex-direction: column;
+        width: 95%;
+        height: 80vh;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+        flex-direction: column;
+        width: 56rem;
+        height: 80vh;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        flex-direction: column;
+        width: 70rem;
+        height: 70rem;
+        overflow-y: auto;
+    }
+
+    @media ${({ theme }) => theme.media.smallDesktop} {
+        width: 90rem;
+        height: 45rem;
+    }
 `;
 
 export const Galery = styled.div`
@@ -64,6 +92,31 @@ export const Galery = styled.div`
     align-items: center;
     width: 50rem;
     background-color: ${({ theme }) => theme.colors.backgroundSecondary};
+
+    & > svg {
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.2rem;
+        color: ${({ theme }) => theme.colors.write};
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        width: 100%;
+
+        & > svg {
+            display: block;
+        }
+    }
+
+    @media ${({ theme }) => theme.media.smallDesktop} {
+        width: 40.5rem;
+    }
 `;
 
 export const Datas = styled.div`
@@ -72,6 +125,13 @@ export const Datas = styled.div`
     flex-direction: column;
     justify-content: space-between;
     padding: 1.5rem;
+    overflow-y: auto;
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        overflow-y: visible;
+    }
 `;
 
 export const HeadTitle = styled.div`
@@ -88,17 +148,44 @@ export const HeadTitle = styled.div`
         color: ${({ theme }) => theme.colors.write};
         cursor: pointer;
     }
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        margin-bottom: 1rem;
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        svg {
+            display: none;
+        }
+    }
 `;
 
 export const Descriptions = styled.p`
     margin: 1rem 0;
     font-size: 1.4rem;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        margin: 0.5rem 0;
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        font-size: 1.2rem;
+    }
 `;
 
 export const LinksContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    flex-wrap: wrap;
 `;
 
 export const Link = styled.a`
@@ -114,4 +201,10 @@ export const Link = styled.a`
         background: rgba(61, 84, 221, 1);
     }
     transition: all 300ms linear;
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        padding: 0.7rem;
+    }
 `;

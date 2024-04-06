@@ -1,18 +1,29 @@
 import styled from 'styled-components';
 
-type CarouselContainerProps = {
-    width: string;
-    height: string;
-};
-
-export const CarouselContainer = styled.div<CarouselContainerProps>`
+export const CarouselContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: ${({ width }) => width};
-    height: ${({ height }) => height};
+    width: 50rem;
+    height: 30rem;
     overflow: hidden;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        width: 100%;
+        height: calc((100vw / 16) * 9);
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile} {
+        width: 50rem;
+        height: 30rem;
+    }
+
+    @media ${({ theme }) => theme.media.smallDesktop} {
+        width: 40.5rem;
+        height: 24.3rem;
+    }
 `;
 
 type ArrowsProps = {
@@ -43,6 +54,25 @@ export const ArrowBack = styled.button<ArrowsProps>`
     &:hover {
         background-color: ${({ theme }) => theme.colors.backgroundPrimary};
     }
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        width: 2rem;
+        height: 4rem;
+
+        svg {
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            background-color: ${({ theme }) =>
+                theme.colors.backgroundSecondary};
+        }
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile} {
+        border-width: 0.2rem;
+    }
 `;
 
 export const ArrowForward = styled.button<ArrowsProps>`
@@ -68,6 +98,25 @@ export const ArrowForward = styled.button<ArrowsProps>`
 
     &:hover {
         background-color: ${({ theme }) => theme.colors.backgroundPrimary};
+    }
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        width: 2rem;
+        height: 4rem;
+
+        svg {
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            background-color: ${({ theme }) =>
+                theme.colors.backgroundSecondary};
+        }
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile} {
+        border-width: 0.2rem;
     }
 `;
 

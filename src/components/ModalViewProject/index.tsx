@@ -19,6 +19,7 @@ function ModalViewProject({ show, onHide, project }: ModalViewProjectProps) {
             <Styled.ModalGlobalStyles />
             <Styled.ContentModal>
                 <Styled.Galery>
+                    <IoClose onClick={onHide} />
                     <Carousel
                         images={project.images}
                         width="50rem"

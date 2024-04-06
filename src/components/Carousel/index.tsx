@@ -15,7 +15,7 @@ type Image = {
     alt: string;
 };
 
-function Carousel({ images, width, height }: CarouselProps) {
+function Carousel({ images }: CarouselProps) {
     const [currentImage, setCurrentImage] = useState(0);
     const [positions, setPositions] = useState<number[]>(
         images.map((_, index) => (index !== 0 ? 100 : 0)),
@@ -60,7 +60,7 @@ function Carousel({ images, width, height }: CarouselProps) {
     };
 
     return (
-        <Styled.CarouselContainer width={width} height={height}>
+        <Styled.CarouselContainer>
             <Styled.ArrowBack visible={currentImage !== 0} onClick={handleBack}>
                 <IoIosArrowBack />
             </Styled.ArrowBack>
