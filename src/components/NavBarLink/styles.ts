@@ -20,9 +20,40 @@ export const NavLink = styled.a<NavLinkProps>`
     align-items: center;
     transition: all 300ms;
 
+    svg {
+        display: none;
+        color: ${({ theme }) => theme.colors.gradientAlternatePrimary};
+        font-size: 1.6rem;
+    }
+
     &:hover {
         background-color: ${({ theme }) =>
             theme.colors.backgroundSecondaryHover};
+    }
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        justify-content: center;
+
+        svg {
+            font-size: 2rem;
+        }
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        width: auto;
+        height: 7rem;
+        min-height: 7rem;
+        flex-direction: column;
+
+        svg {
+            display: block;
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
     }
 `;
 
@@ -35,4 +66,23 @@ export const NavText = styled.p`
     text-orientation: mixed;
     transform: rotate(-180deg);
     margin: auto;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        display: none;
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+        font-size: 1.8rem;
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        font-size: 2rem;
+    }
+
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        transform: rotate(0deg);
+        writing-mode: horizontal-tb;
+    }
 `;

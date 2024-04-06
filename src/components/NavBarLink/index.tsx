@@ -1,7 +1,9 @@
+import React from 'react';
 import * as Styled from './styles';
 
 type NavBarLinkProps = {
     text: string;
+    icon: React.ReactNode;
     to: string;
     selected?: boolean;
     openInNewTab?: boolean;
@@ -9,6 +11,7 @@ type NavBarLinkProps = {
 
 function NavBarLink({
     text,
+    icon,
     to,
     selected = false,
     openInNewTab = false,
@@ -20,6 +23,7 @@ function NavBarLink({
             target={openInNewTab ? '_blank' : '_self'}
             rel="noreferrer"
         >
+            {icon}
             <Styled.NavText>{text}</Styled.NavText>
         </Styled.NavLink>
     );

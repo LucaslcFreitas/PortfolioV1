@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavContainer = styled.nav`
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 7rem;
     height: 100vh;
@@ -21,6 +21,7 @@ export const NavContainer = styled.nav`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    z-index: 100;
 
     &::before {
         content: '';
@@ -49,14 +50,28 @@ export const NavContainer = styled.nav`
     }
 
     @media ${({ theme }) => theme.media.smallMobile} {
-        display: none;
+        gap: 4rem;
     }
 
-    @media ${({ theme }) => theme.media.mobile} {
-        display: none;
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile} {
+        gap: 3rem;
     }
 
-    @media ${({ theme }) => theme.media.tablet} {
-        display: none;
+    @media ${({ theme }) => theme.media.tablet},
+        ${({ theme }) => theme.media.mobile},
+        ${({ theme }) => theme.media.smallMobile} {
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 7rem;
+        flex-direction: row;
+        border-image: none;
+        border-right-width: 0;
+
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 `;
