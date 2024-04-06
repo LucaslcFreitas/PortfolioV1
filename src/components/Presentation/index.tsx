@@ -2,7 +2,7 @@ import * as Styled from './styles';
 
 function Presentation() {
     const handleContact = () => {
-        console.log('contact');
+        window.open('mailto:lucaslcfjf@hotmail.com', '_blank');
     };
 
     return (
