@@ -6,4 +6,8 @@ export const ContactsContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        flex-wrap: wrap;
+    }
 `;
