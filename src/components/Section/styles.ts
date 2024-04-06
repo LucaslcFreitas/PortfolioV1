@@ -8,6 +8,7 @@ export const Section = styled(motion.section)`
 
     @media ${({ theme }) => theme.media.smallMobile} {
         width: ${({ theme }) => theme.container.smallMobile};
+        margin: 2rem auto;
         padding: 1.5rem;
     }
 
