@@ -13,6 +13,22 @@ export const ProjectTitle = styled.p`
     opacity: 1;
     visibility: visible;
     transition: all 300ms;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        font-size: 2rem;
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+        font-size: 2rem;
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        font-size: 2rem;
+    }
+
+    @media ${({ theme }) => theme.media.smallDesktop} {
+        font-size: 2.4rem;
+    }
 `;
 
 export const FooterSubitle = styled.p`
@@ -21,6 +37,14 @@ export const FooterSubitle = styled.p`
     font-weight: bold;
     opacity: 1;
     visibility: visible;
+
+    @media ${({ theme }) => theme.media.tablet} {
+        font-size: 1.4rem;
+    }
+
+    @media ${({ theme }) => theme.media.smallDesktop} {
+        font-size: 1.6rem;
+    }
 `;
 
 export const FooterButton = styled.button`
@@ -40,6 +64,11 @@ export const FooterButton = styled.button`
     &:hover {
         background-color: ${({ theme }) => theme.colors.write};
         color: ${({ theme }) => theme.colors.grey};
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        font-size: 1rem;
+        width: 6rem;
     }
 `;
 
@@ -70,6 +99,19 @@ export const ProjectFooter = styled.div`
     border-radius: 0 0 1rem 1rem;
     z-index: -10;
     transition-duration: 300ms;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        display: none;
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+        display: none;
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        height: 4rem;
+        padding: 0.5rem;
+    }
 `;
 
 export const ContainerProject = styled.div<ContainerProjectProps>`
@@ -78,7 +120,7 @@ export const ContainerProject = styled.div<ContainerProjectProps>`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 27rem;
+    height: 26rem;
     z-index: 0;
     background-color: ${({ theme }) => theme.colors.backgroundTertiary};
     border-radius: 1rem;
@@ -127,5 +169,57 @@ export const ContainerProject = styled.div<ContainerProjectProps>`
             bottom: -4rem;
             animation: ${showIn} 400ms linear;
         }
+    }
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        height: calc((100vw / 16) * 9);
+
+        &:hover {
+            transform: scale(1);
+
+            ${ProjectTitle}, &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            ${ProjectFooter} {
+                bottom: 0;
+            }
+        }
+    }
+
+    @media ${({ theme }) => theme.media.mobile} {
+        height: 32rem;
+
+        &:hover {
+            transform: scale(1);
+
+            ${ProjectTitle}, &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            ${ProjectFooter} {
+                bottom: 0;
+            }
+        }
+    }
+
+    @media ${({ theme }) => theme.media.tablet} {
+        height: 20rem;
+
+        &:hover {
+            ${ProjectFooter} {
+                bottom: -3rem;
+            }
+        }
+    }
+
+    @media ${({ theme }) => theme.media.smallDesktop} {
+        height: 24rem;
+    }
+
+    @media ${({ theme }) => theme.media.normalDesktop} {
+        height: 23rem;
     }
 `;
