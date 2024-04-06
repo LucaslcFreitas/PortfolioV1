@@ -8,4 +8,8 @@ export const ContainerSkill = styled.div`
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+
+    @media ${({ theme }) => theme.media.smallMobile} {
+        justify-content: center;
+    }
 `;

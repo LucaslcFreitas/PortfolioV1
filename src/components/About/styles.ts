@@ -8,6 +8,7 @@ export const Paragraph = styled.div`
     @media ${({ theme }) => theme.media.smallMobile} {
         font-size: 1.6rem;
         margin: 1.6rem 0;
+        line-height: 22px;
     }
 
     @media ${({ theme }) => theme.media.mobile} {
