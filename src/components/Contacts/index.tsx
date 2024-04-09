@@ -1,7 +1,7 @@
 import ContactCard, { ContactType } from '../ContactCard';
 import * as Styled from './styles';
 
-type ContactsProps = {
+export type ContactsProps = {
     contacts: ContactType[];
 };
 

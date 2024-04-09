@@ -3,7 +3,7 @@ import ModalViewProject from '../ModalViewProject';
 import ProjectCard, { ProjectType } from '../ProjectCard';
 import * as Styled from './styles';
 
-type ProjectsProps = {
+export type ProjectsProps = {
     projects: ProjectType[];
 };
 

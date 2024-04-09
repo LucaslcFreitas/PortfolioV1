@@ -10,7 +10,7 @@ function Presentation() {
             <Styled.Content>
                 <Styled.ProfileBox>
                     <Styled.ImgProfile
-                        src="./assets/profile.jpg"
+                        src="./assets/profile.png"
                         alt="Imagem de Lucas Lino"
                     />
                 </Styled.ProfileBox>

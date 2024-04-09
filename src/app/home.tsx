@@ -3,37 +3,40 @@
 import About from '@/components/About';
 import Presentation from '@/components/Presentation';
 import Section from '@/components/Section';
-import Skills from '@/components/Skills';
-import styled from 'styled-components';
+import Skills, { SkillList } from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contacts from '@/components/Contacts';
 import Footer from '@/components/Footer';
+import { ProjectType } from '@/components/ProjectCard';
+import { ContactType } from '@/components/ContactCard';
 
-//Datas
-import { descriptionsData } from '@/data/descriptions';
-import { skillsData } from '@/data/skills';
-import { projectsData } from '@/data/projects';
-import { contactsData } from '@/data/contacts';
+type HomePageProps = {
+    descriptions: string[];
+    skills: SkillList[];
+    projects: ProjectType[];
+    contacts: ContactType[];
+};
 
-const Heading = styled.h1`
-    background: ${({ theme }) => theme.colors.backgroundPrimary};
-`;
-
-export default function Homepage() {
+export default function Homepage({
+    descriptions,
+    skills,
+    projects,
+    contacts,
+}: HomePageProps) {
     return (
         <>
             <Presentation />
             <Section id="about" title="Sobre Mim">
-                <About descriptions={descriptionsData} />
+                <About descriptions={descriptions} />
             </Section>
             <Section id="skills" title="Habilidades">
-                <Skills skillsList={skillsData} />
+                <Skills skillsList={skills} />
             </Section>
             <Section id="projects" title="Projetos">
-                <Projects projects={projectsData} />
+                <Projects projects={projects} />
             </Section>
             <Section id="contacts" title="Contatos">
-                <Contacts contacts={contactsData} />
+                <Contacts contacts={contacts} />
             </Section>
             <Footer />
         </>

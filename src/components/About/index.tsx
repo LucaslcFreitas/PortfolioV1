@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 
-type AboutProps = {
+export type AboutProps = {
     descriptions: string[];
 };
 
